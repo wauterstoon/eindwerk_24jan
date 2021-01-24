@@ -36,7 +36,7 @@ class OphaalOverviewFragment: Fragment() ,OphaalClickListener{
 
 
         viewModel.ophaals.observe(viewLifecycleOwner, Observer {
-            
+
         })
 
         return binding.root
