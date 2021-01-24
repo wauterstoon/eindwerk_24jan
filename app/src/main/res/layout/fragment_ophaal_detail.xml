@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="ophaal"
+            type="com.example.eindwerk.models.Ophaal" />
+    </data>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+     android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/tv_detail_fractie"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@{ophaal.fields.fractie}"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Fractie" />
+
+    <TextView
+        android:id="@+id/tv_detail_kalender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@{ophaal.fields.kalender}"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_detail_fractie"
+        tools:text="straat 23, 9000 Gent" />
+
+    <TextView
+        android:id="@+id/tv_detail_datum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@{ophaal.fields.datum}"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="36dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_detail_kalender"
+        tools:text="Tel: 0994180254" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

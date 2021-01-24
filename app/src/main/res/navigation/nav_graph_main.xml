@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/nav_graph_main"
+    app:startDestination="@id/ophaalOverviewFragment">
+
+    <fragment
+        android:id="@+id/ophaalOverviewFragment"
+        android:name="com.example.eindwerk.ui.OphaalOverviewFragment"
+        android:label="OphaalOverviewFragment" >
+        <action
+            android:id="@+id/action_ophaalOverviewFragment_to_ophaalDetailFragment"
+            app:destination="@id/ophaalDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/ophaalDetailFragment"
+        android:name="com.example.eindwerk.ui.OphaalDetailFragment"
+        android:label="OphaalDetailFragment" >
+        <argument
+            android:name="ophaalId"
+            app:argType="string" />
+    </fragment>
+</navigation>
